@@ -1,19 +1,24 @@
 $red = #ee3a49
 $black = #1c1c1c
 @import "./fonts.styl";
+#app
+    box-sizing: border-box
+    background: $red
+    min-height: 100%
+    width: 100%
+    position:absolute
+    padding: 30px
+    font-family: 'CalibreRegular'
 .content
-  box-sizing: border-box;
-  background: $red
-  min-height: 100%
-  width: 100%
-  position:absolute
-  padding: 30px
-  font-family: 'CalibreRegular'
   h1
     text-align:center
     font-size:24vw;
     margin: 0
     font-family: 'CalibreSemibold'
+    @media screen and (max-width: 700px) {
+      font-size:26vw;
+    }
+
 .reactor
   max-width: 1440px
   margin: 0 auto
@@ -29,11 +34,23 @@ $black = #1c1c1c
     line-height: 40px
     margin-top: 200px
     font-family: 'CalibreRegular'
+    @media screen and (max-width: 700px) {
+      float:left
+      width: 100%
+      margin-top: 50px
+    }
   .copyright
     float: left
     margin-top: 35px
+    font-size: 12px
   .contact
     width: 500px
     float:right
+    font-size: 14px
+    line-height: 16px
+    @media screen and (max-width: 700px) {
+      float:left
+      width: 100%
+    }
     b
       font-family: 'CalibreSemibold'
