@@ -42,7 +42,7 @@ function getDefaultModules() {
       },
       {
         test: /\.styl/,
-        loader: 'style-loader!css-loader!stylus-loader'
+        loader: 'style-loader!css-loader!stylus-loader?paths=node_modules/s-grid/'
       },
       {
         test: /\.(png|jpg|gif)$/,
