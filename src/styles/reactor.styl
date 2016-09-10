@@ -4,7 +4,9 @@ $black = #1c1c1c
 @import 's-grid-settings'
 gutter = 24px
 @import 's-grid-functions'
-#app
+.black
+
+.wraper
   box-sizing: border-box
   background: $red
   height: 100%
@@ -13,6 +15,19 @@ gutter = 24px
   padding: 40px 0
   font-family: 'CalibreRegular'
   font-weight: normal
+  transition: all .3s
+  cursor: url(../images/dot_white_retina.png), default
+  &.white
+    background: white;
+    color: $black
+    cursor: url(../images/dot_red_retina.png), default
+    .logo
+      background: url("../images/logo_red.svg") no-repeat
+      background-size: 100% auto
+  &.black
+    background: $black;
+    color: white
+    cursor: url(../images/dot_red_retina.png), default
 .reactor
   grid()
   max-width: 1340px
@@ -29,15 +44,6 @@ gutter = 24px
     background-size: 100% auto
     @media screen and (max-width: 700px)
       height: 100px
-  h1
-    text-align:center
-    font-size:24vw;
-    margin: 0
-    font-family: 'CalibreSemibold'
-    font-weight: normal
-    @media screen and (max-width: 700px) {
-      font-size:26vw;
-    }
   .line
     float:left
     width: 100%
