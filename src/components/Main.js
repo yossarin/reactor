@@ -5,13 +5,16 @@ import "styles/reactor.styl";
 import React from 'react';
 
 class AppComponent extends React.Component {
+  state = {
+    color: "red",
+    num: 1
+  }
   constructor(props) {
     super(props);
-    this.state = {
-      color: "red",
-      num: 1
-    }
     this.changeColors = this.changeColors.bind(this);
+  }
+  componentDidMount() {
+    this.changeColors();
   }
   genNumber() {
     return Math.floor((Math.random() * 3) + 1);
@@ -41,8 +44,8 @@ class AppComponent extends React.Component {
             </div>
             <div className="text">
               <h2>Reactor is a new digital product studio in Hong Kong and Zagreb
-                that makes your digital products a reality. <br/>
-                We connect your technology ideas with the joy of the customers</h2>
+                  that can turn your ideas into reality.  <br/>
+                We work with you to build technology to the delight of your customers.</h2>
               <div className="line"></div>
               <p className="contact"><b>Contact Us</b> <br/> hello@reactor.studio</p>
             </div>
