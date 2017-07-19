@@ -43,9 +43,10 @@ class AppComponent extends React.Component {
             <div className="logo">
             </div>
             <div className="text">
-              <h2>Reactor is a new digital product studio in Hong Kong and Zagreb
-                  that can turn your ideas into reality.  <br/>
-                  We work with you to build a product to the delight of your customers.</h2>
+              <h2>Reactor is a development studio based in Zagreb
+                  that turns your ideas into reality, with high attention to
+                  detail and no technical depth!
+              </h2>
               <div className="line"></div>
               <p className="contact"><b>Contact Us</b> <br/> hello@reactor.studio</p>
             </div>
