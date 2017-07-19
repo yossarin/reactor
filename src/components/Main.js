@@ -45,12 +45,12 @@ class AppComponent extends React.Component {
             <div className="text">
               <h2>Reactor is a development studio based in Zagreb
                   that turns your ideas into reality, with high attention to
-                  detail and no technical depth!
+                  detail and no technical dept!
               </h2>
               <div className="line"></div>
               <p className="contact"><b>Contact Us</b> <br/> hello@reactor.studio</p>
             </div>
-            <p className="copyright">© 2016  ReactorStudio Limited</p>
+            <p className="copyright">© 2017  ReactorStudio Limited</p>
           </div>
         </div>
       </div>
