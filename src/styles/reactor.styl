@@ -44,6 +44,7 @@ gutter = 24px
     background-size: 100% auto
     @media screen and (max-width: 700px)
       height: 100px
+      background-size: contain!important
   .line
     float:left
     width: 100%
@@ -53,8 +54,11 @@ gutter = 24px
     left 50%
     bottom: 0
     max-width: 500px
+    @media screen and (max-width: 1000px)
+      max-width: 300px
     @media screen and (max-width: 700px)
       float:left
+      max-width: 100%
       left:0
       position:relative
       padding: 12px
@@ -84,6 +88,8 @@ gutter = 24px
     font-size: 20px
     line-height: 22px
     margin-top: 35px
+    @media screen and (max-width: 1000px)
+      max-width: 300px
     @media screen and (max-width: 700px) {
       float:left
       width: 100%
