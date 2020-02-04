@@ -21,7 +21,7 @@ const link = {
   marginRight: '20px'
 }
 
-const Header = ({ siteTitle }) => (
+const Header = () => (
   <Head>
     <Container>
       <nav>
