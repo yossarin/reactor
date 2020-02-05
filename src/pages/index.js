@@ -7,7 +7,6 @@ import SEO from '../components/seo'
 const Title = styled.h1`
   font-size: 150px;
   text-transform: uppercase;
-  font-family: SojuzMono-Regular;
   margin-top: 40px;
   margin-bottom: 150px;
 `
@@ -39,13 +38,16 @@ const Rotator = styled.div`
   padding: 50px 0;
 `
 const RotatorText = styled.marquee`
-  marquee-speed: fast;
+  scrollamount: 5;
   color: #F28924;
   background: #1A465C;
   margin: 0;
   font-size: 188px;
-  line-height: 1;
+  line-height: 1.2;
   text-wrap: no-wrap;
+  text-transform: uppercase;
+  font-family: SojuzMono-Bold;
+
 `
 
 const IndexPage = () => (

@@ -32,7 +32,7 @@ module.exports = {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         custom: {
-          families: ['SojuzMono-Regular', 'Inter-Regular'],
+          families: ['SojuzMono-Regular', 'SojuzMono-Bold', 'Inter-Regular'],
           urls: ['/fonts/fonts.css']
         }
       }
