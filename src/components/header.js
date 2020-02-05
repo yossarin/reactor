@@ -1,10 +1,10 @@
-import { Link } from "gatsby"
-import React from "react"
-import styled from "styled-components"
+import { Link } from 'gatsby'
+import React from 'react'
+import styled from 'styled-components'
 
 const Head = styled.div`
   background: #1A465C;
-  margin-bottom: 1.45rem;
+  margin-bottom: 20px;
 `
 
 const Container = styled.div`
