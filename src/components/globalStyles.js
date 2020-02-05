@@ -1,9 +1,14 @@
 import { createGlobalStyle } from 'styled-components'
 
+export const black = '#111111'
+export const darkBlue = '#1A465C'
+export const orange = '#F28924'
+
 export const GlobalStyles = createGlobalStyle`
   html {
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
+    color: ${black};
   }
   body {
     margin: 0;
@@ -201,7 +206,7 @@ export const GlobalStyles = createGlobalStyle`
     box-sizing: inherit;
   }
   body {
-    color: hsla(0, 0%, 0%, 0.8);
+    color: ${black};
     font-family: Inter-Regular;
     font-weight: normal;
     word-wrap: break-word;

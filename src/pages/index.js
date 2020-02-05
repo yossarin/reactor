@@ -2,9 +2,11 @@ import React from 'react'
 import styled from 'styled-components'
 
 import Layout, { Container } from '../components/layout'
+import { darkBlue, orange } from '../components/globalStyles'
 import SEO from '../components/seo'
 
 const Title = styled.h1`
+  color: ${darkBlue};
   font-size: 150px;
   text-transform: uppercase;
   margin-top: 40px;
@@ -34,16 +36,15 @@ const BlockText =styled.p`
 `
 
 const Rotator = styled.div`
-  background: #1A465C;
+  background: ${darkBlue};
   padding: 50px 0;
 `
 const RotatorText = styled.marquee`
-  scrollamount: 5;
-  color: #F28924;
-  background: #1A465C;
+  color: ${orange};
+  background: ${darkBlue};
   margin: 0;
   font-size: 188px;
-  line-height: 1.2;
+  line-height: 1;
   text-wrap: no-wrap;
   text-transform: uppercase;
   font-family: SojuzMono-Bold;
