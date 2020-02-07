@@ -5,6 +5,13 @@ import styled from 'styled-components'
 import { Container } from './layout';
 import { grey } from './globalStyles'
 
+const Foot = styled.footer`
+    position: relative;
+    margin-bottom: 454px;
+    z-index: 1;
+    background: white;
+`;
+
 const Content = styled.div`
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -37,7 +44,7 @@ const link = {
   }
 
 const Footer = () => (
-  <footer>
+  <Foot>
     <Container>
         <Content>
             <Left>
@@ -53,7 +60,7 @@ const Footer = () => (
                 <p>Join us</p>
                 <p>hello@reactor.studio</p>
                 <div></div>
-                <p>Follow us</p>
+                <p>Stalk us</p>
                 <p>Facebook, Linkedin</p>
             </Right>
             <Left></Left>
@@ -84,7 +91,7 @@ const Footer = () => (
             </Right>
         </Content>
     </Container>
-  </footer>
+  </Foot>
 )
 
 export default Footer

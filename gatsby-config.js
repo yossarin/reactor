@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Reactor web',
-    description: 'JavaScript development done right',
+    description: 'JavaScript done right',
     author: '@reactor3'
   },
   plugins: [

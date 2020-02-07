@@ -12,12 +12,33 @@ import styled from 'styled-components'
 
 import Header from './header'
 import Footer from './footer'
-import { GlobalStyles } from './globalStyles'
+import { GlobalStyles, orange, darkBlue } from './globalStyles'
 
 
 export const Container = styled.div`
   width: 1200px;
   margin: 0 auto;
+  `
+
+ const Main = styled.main`
+  background: white;
+`
+
+const Github = styled.div`
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: ${orange};
+  text-align: center;
+  color: ${darkBlue};
+  font-size: 140px;
+  padding: 150px 0;
+  z-index: -1;
+`
+
+const Title = styled.h1`
+  font-size: 140px;
+  text-transform: uppercase;
 `
 
 const Layout = ({ children }) => {
@@ -35,8 +56,11 @@ const Layout = ({ children }) => {
     <>
       <GlobalStyles />
       <Header siteTitle={data.site.siteMetadata.title} />
-      <main>{children}</main>
+      <Main>{children}</Main>
       <Footer/>
+      <Github>
+        <Title>Open 24/7</Title>
+      </Github>
     </>
   )
 }

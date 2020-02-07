@@ -10,6 +10,7 @@ const Sticky = styled.div`
   top: 0;
   width: 100%;
   background: white;
+  z-index: 10;
 `
 
 const Content = styled.div`
