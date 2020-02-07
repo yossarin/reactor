@@ -6,7 +6,6 @@ import { darkBlue, orange } from '../components/globalStyles'
 import SEO from '../components/seo'
 
 const Title = styled.h1`
-  color: ${darkBlue};
   font-size: 150px;
   text-transform: uppercase;
   margin-top: 40px;
@@ -55,7 +54,7 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Reacotr Studio compound" />
     <Container>
-      <Title>Reactor <br/> JavaScript <br/> done right.</Title>
+      <Title>JavaScript <br/> done right.</Title>
     </Container>
     <Separator></Separator>
     <Container>

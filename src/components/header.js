@@ -2,44 +2,48 @@ import { Link } from 'gatsby'
 import React from 'react'
 import styled from 'styled-components'
 
-const Head = styled.div`
-  background: #1A465C;
-  margin-bottom: 20px;
-`
+import { grey, darkBlue } from './globalStyles'
+import { Container } from '../components/layout'
 
-const Container = styled.div`
-  margin: 0 auto;
-  max-width: 960px;
+const Content = styled.div`
   padding: 20px 0;
+  margin-bottom: 20px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  align-items: center;
+`
+const Title = styled.h1`
+  color: ${darkBlue};
 `
 
 const link = {
-  color: 'white',
-  textDecoration: 'none',
-  marginRight: '20px'
+  color: grey,
+  marginRight: '20px',
+  fontSize: '18px'
 }
 
 const Header = () => (
-  <Head>
-    <Container>
+  <Container>
+    <Content>
+      <Link to="/" style={{textDecoration: 'none'}}>
+        <Title>Reactor</Title>
+      </Link>
       <nav>
-        <Link to="/about" style={link}>
+        <Link to="/about" style={link} activeClassName="active">
           About
         </Link>
-        <Link to="/training" style={link}>
+        <Link to="/training" style={link} activeClassName="active">
           Training
         </Link>
-        <Link to="/blog" style={link}>
+        <Link to="/blog" style={link} activeClassName="active">
           Blog
         </Link>
-        <Link to="/careers" style={link}>
+        <Link to="/careers" style={link} activeClassName="active">
           Careers
         </Link>
       </nav>
-    </Container>
-  </Head>
+    </Content>
+  </Container>
 )
 
 export default Header

@@ -1,6 +1,7 @@
 import { createGlobalStyle } from 'styled-components'
 
 export const black = '#111111'
+export const grey = '#686868'
 export const darkBlue = '#1A465C'
 export const orange = '#F28924'
 
@@ -621,5 +622,12 @@ export const GlobalStyles = createGlobalStyle`
   pre tt:before,
   pre tt:after {
     content: "";
-  } 
+  }
+  nav a {
+    text-decoration: none;
+  }
+  nav .active, nav a:hover {
+    font-weight: bold;
+    border-bottom: 1px solid ${black};
+  }
 `
