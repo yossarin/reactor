@@ -8,7 +8,7 @@ import SEO from '../components/seo'
 const Title = styled.h1`
   font-size: 150px;
   text-transform: uppercase;
-  margin-top: 40px;
+  margin-top: 160px;
   margin-bottom: 150px;
 `
 
