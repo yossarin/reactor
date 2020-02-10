@@ -18,7 +18,7 @@ import { GlobalStyles, orange, darkBlue } from './globalStyles'
 export const Container = styled.div`
   width: 1200px;
   margin: 0 auto;
-  `
+`
 
  const Main = styled.main`
   background: white;
@@ -58,9 +58,11 @@ const Layout = ({ children }) => {
       <Header siteTitle={data.site.siteMetadata.title} />
       <Main>{children}</Main>
       <Footer/>
-      <Github>
-        <Title>Open 24/7</Title>
-      </Github>
+      <a href="https://github.com/reactor-studio" target="_blank">
+        <Github>
+          <Title>Open 24/7</Title>
+        </Github>
+      </a>
     </>
   )
 }

@@ -4,6 +4,7 @@ import styled from 'styled-components'
 
 import { Container } from './layout';
 import { grey, greyBck } from './globalStyles'
+import logo from '../images/logo.png'
 
 const Foot = styled.footer`
     position: relative;
@@ -12,10 +13,13 @@ const Foot = styled.footer`
     background: ${greyBck};
 `;
 
+const Logo = styled.img`
+    width: 100px;
+`
+
 const Content = styled.div`
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    border-top: 1px solid #c9c9c9;
     padding-top: 100px;
     padding-bottom: 130px;
 `
@@ -48,7 +52,7 @@ const Footer = () => (
     <Container>
         <Content>
             <Left>
-                Logo
+                <Logo src={logo} />
             </Left>
             <Right>
                 <p>Adress</p>

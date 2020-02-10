@@ -3,9 +3,13 @@ import { Link, graphql } from 'gatsby'
 import styled from 'styled-components'
 
 import Layout from '../components/layout'
-import { Title, Content, darkBlue, greyBck, grey } from '../components/globalStyles'
+import { Title, Content as Cont, darkBlue, greyBck, grey } from '../components/globalStyles'
 
 import SEO from '../components/seo'
+
+const Content = styled(Cont)`
+  padding: 50px 0;
+`
 
 const BlogTitle = styled.h2`
   font-size:42px;
@@ -18,7 +22,6 @@ const Description = styled.p`
 `
 const Meta = styled.div`
   display:flex;
-  padding-bottom: 50px;
 `
 const Author = styled.div`
   color:white;
@@ -40,15 +43,24 @@ const Tags = styled(Length)`
   text-transform: uppercase;
 `
 
+const Separator = styled.div`
+  border-top: 1px solid ${greyBck};
+`
+
 const Post = post => (
   <>
-    <BlogTitle>{post.title}</BlogTitle>
-    <Description>{post.description}</Description>
-    <Meta>
-      <Author>{post.author}</Author>
-      <Length>{post.length} min</Length>
-      <Tags>{post.tags.join(', ')}</Tags>
-    </Meta>
+    <Content>
+      <Link to={post.fields.slug}>
+        <BlogTitle>{post.frontmatter.title}</BlogTitle>
+      </Link>
+      <Description>{post.frontmatter.description}</Description>
+      <Meta>
+        <Author>{post.frontmatter.author}</Author>
+        <Length>{post.frontmatter.length} min</Length>
+        <Tags>{post.frontmatter.tags.join(', ')}</Tags>
+      </Meta>
+    </Content>
+    <Separator/>
   </>
 )
 
@@ -59,8 +71,8 @@ const BlogPage = ({ data }) => {
     <SEO title="Blog" />
     <Content>
       <Title>Long reads as brain food. <br/> Read what we’re thinking about.</Title>
-      {posts.map(post => Post(post.node.frontmatter))}
     </Content>
+    {posts.map(post => Post(post.node))}
   </Layout>
 )};
 
@@ -71,6 +83,9 @@ export const pageQuery = graphql`
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
+          fields {
+            slug
+          }
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
