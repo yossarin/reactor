@@ -1,23 +1,21 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Link } from 'gatsby'
 import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import RotatorText from '../components/rotatorText'
+import { greyBck, Title, Content } from '../components/globalStyles'
 
-const Title = styled.h1`
-  font-family: "Inter-Regular";
-  font-weight: bold;
-  font-size: 4rem;
-  margin: 20vh 0 2.3rem;
-`
-
-const Content = styled.section`
-  max-width: 66em;
-  margin: 0 auto;
+const Heading = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: ${greyBck};
+  height:600px;
+  width: 100%;
+  z-index: -1;
 `
 
 const Description = styled.p`
@@ -44,7 +42,8 @@ const CareersPage = () => {
 
   return (
     <Layout>
-      <SEO title="About reactor" />
+      <SEO title="About Reactor" />
+      <Heading/>
       <Content>
         <Title>We're always on the lookout for awesome talent.</Title>
         <Description>

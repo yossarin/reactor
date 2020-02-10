@@ -3,13 +3,13 @@ import React from 'react'
 import styled from 'styled-components'
 
 import { Container } from './layout';
-import { grey } from './globalStyles'
+import { grey, greyBck } from './globalStyles'
 
 const Foot = styled.footer`
     position: relative;
     margin-bottom: 454px;
     z-index: 1;
-    background: white;
+    background: ${greyBck};
 `;
 
 const Content = styled.div`

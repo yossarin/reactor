@@ -1,9 +1,22 @@
-import { createGlobalStyle } from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
 
 export const black = '#111111'
 export const grey = '#686868'
+export const greyBck = '#F8F8F8'
 export const darkBlue = '#1A465C'
 export const orange = '#F28924'
+
+export const Title = styled.h1`
+  font-family: "Inter-Regular";
+  font-weight: bold;
+  font-size: 4rem;
+  margin: 20vh 0 2.3rem;
+`
+
+export const Content = styled.section`
+  max-width: 66em;
+  margin: 0 auto;
+`
 
 export const GlobalStyles = createGlobalStyle`
   html {

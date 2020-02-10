@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Reactor web',
+    title: 'Reactor',
     description: 'JavaScript done right',
     author: '@reactor3'
   },
@@ -12,6 +12,28 @@ module.exports = {
       options: {
         name: 'images',
         path: `${__dirname}/src/images`
+      }
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'blog',
+        path: `${__dirname}/content/blog`
+      }
+    },
+    {
+      resolve: 'gatsby-transformer-remark',
+      options: {
+        plugins: [
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              maxWidth: 590
+            }
+          },
+          'gatsby-remark-prismjs',
+          'gatsby-remark-smartypants'
+        ]
       }
     },
     'gatsby-transformer-sharp',
