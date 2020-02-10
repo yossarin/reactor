@@ -12,11 +12,11 @@ const Title = styled.h1`
   font-family: "Inter-Regular";
   font-weight: bold;
   font-size: 4rem;
-  margin: 20vh 0 42px;
+  margin: 20vh 0 2.3rem;
 `
 
 const Content = styled.section`
-  max-width: 1200px;
+  max-width: 66em;
   margin: 0 auto;
 `
 
@@ -26,10 +26,10 @@ const Description = styled.p`
 `
 
 const Cover = styled(Img)`
-  margin: 5.5em 0;
+  margin: 5.5rem 0;
 `
 
-const SecondPage = (props) => {
+const CareersPage = () => {
   const data = useStaticQuery(graphql`
     query {
       coverImage: file(relativePath: { eq: "temp-reactor-cover.jpg" }) {
@@ -62,4 +62,4 @@ const SecondPage = (props) => {
   )
 }
 
-export default SecondPage
+export default CareersPage
