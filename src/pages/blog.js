@@ -3,7 +3,7 @@ import { Link, graphql } from 'gatsby'
 import styled from 'styled-components'
 
 import Layout from '../components/layout'
-import { Title, Content as Cont, darkBlue, greyBck, grey } from '../components/globalStyles'
+import { Title, Content as Cont, darkBlue, greyBck, grey, black } from '../components/globalStyles'
 
 import SEO from '../components/seo'
 
@@ -23,7 +23,7 @@ const Description = styled.p`
 const Meta = styled.div`
   display:flex;
 `
-const Author = styled.div`
+export const Author = styled.div`
   color:white;
   background: ${darkBlue};
   border-radius: 4px;
@@ -32,13 +32,13 @@ const Author = styled.div`
   font-family: SojuzMono-Regular;
 `
 
-const Length = styled(Author)`
-  background: ${greyBck};
+export const Duration = styled(Author)`
+  background: #E9E9E9;
   color: ${grey};
   margin-left: 40px;
 `
 
-const Tags = styled(Length)`
+const Tags = styled(Duration)`
   margin-left: auto;
   text-transform: uppercase;
 `
@@ -47,16 +47,23 @@ const Separator = styled.div`
   border-top: 1px solid ${greyBck};
 `
 
+const link = {
+  color: black,
+  textDecoration: 'none'
+}
+
+
+
 const Post = post => (
   <>
     <Content>
-      <Link to={post.fields.slug}>
+      <Link to={post.fields.slug} style={link}>
         <BlogTitle>{post.frontmatter.title}</BlogTitle>
       </Link>
       <Description>{post.frontmatter.description}</Description>
       <Meta>
         <Author>{post.frontmatter.author}</Author>
-        <Length>{post.frontmatter.length} min</Length>
+        <Duration>{post.frontmatter.duration} min</Duration>
         <Tags>{post.frontmatter.tags.join(', ')}</Tags>
       </Meta>
     </Content>
@@ -70,7 +77,7 @@ const BlogPage = ({ data }) => {
   <Layout>
     <SEO title="Blog" />
     <Content>
-      <Title>Long reads as brain food. <br/> Read what we’re thinking about.</Title>
+      <Title>Long reads as brain food. <br/> Read what we’re up to.</Title>
     </Content>
     {posts.map(post => Post(post.node))}
   </Layout>
@@ -91,7 +98,7 @@ export const pageQuery = graphql`
             title
             description
             tags
-            length
+            duration
             author
           }
         }

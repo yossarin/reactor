@@ -22,6 +22,7 @@ export const Container = styled.div`
 
  const Main = styled.main`
   background: white;
+  margin-top: 84px;
 `
 
 const Github = styled.div`

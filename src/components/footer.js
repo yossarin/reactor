@@ -58,11 +58,11 @@ const Footer = () => (
                 <p>Adress</p>
                 <p>Đorđićeva 8a</p>
                 <p>Zagreb, Croatia</p>
-                <p>Work with us</p>
-                <p>biz@reactor.studio</p>
-                <div></div>
-                <p>Join us</p>
+                <p>Email us</p>
                 <p>hello@reactor.studio</p>
+                <div></div>
+                <p>Call us</p>
+                <p>+385 95 398 6599</p>
                 <div></div>
                 <p>Stalk us</p>
                 <p>Facebook, Linkedin</p>

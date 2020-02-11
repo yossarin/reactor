@@ -4,7 +4,7 @@ const slug = require('slug');
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
-  const blogPost = path.resolve('./src/pages/blogPost.js')
+  const blogPost = path.resolve('./src/templates/blogPost.js')
   const result = await graphql(
     `
       {
