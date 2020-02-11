@@ -42,7 +42,7 @@ const CareersPage = () => {
 
   return (
     <Layout>
-      <SEO title="About Reactor" />
+      <SEO title="Careers Reactor" />
       <Heading/>
       <Content>
         <Title>We're always on the lookout for awesome talent.</Title>
