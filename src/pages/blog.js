@@ -1,11 +1,15 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 import styled from 'styled-components'
-
+import TimeAgo from 'javascript-time-ago'
+import en from 'javascript-time-ago/locale/en'
 import Layout from '../components/layout'
 import { Title, Content as Cont, darkBlue, greyBck, grey, black } from '../components/globalStyles'
 
 import SEO from '../components/seo'
+
+TimeAgo.addLocale(en)
+const timeAgo = new TimeAgo('en-US')
 
 const Content = styled(Cont)`
   padding: 50px 0;
@@ -63,7 +67,8 @@ const Post = post => (
       <Description>{post.frontmatter.description}</Description>
       <Meta>
         <Author>{post.frontmatter.author}</Author>
-        <Duration>{post.frontmatter.duration} min</Duration>
+        <Duration>{timeAgo.format(new Date(post.frontmatter.date))}</Duration>
+        <Duration>{post.frontmatter.duration} min read</Duration>
         <Tags>{post.frontmatter.tags.join(', ')}</Tags>
       </Meta>
     </Content>
@@ -94,7 +99,7 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
+            date
             title
             description
             tags

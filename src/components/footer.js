@@ -75,9 +75,8 @@ const Footer = () => (
                 <p>Stalk us</p>
                 <Links>
                     <LinkFoot href="https://web.facebook.com/reactorzgb" target="_blank">Facebook</LinkFoot>,&nbsp;
-                    <LinkFoot href="https://www.linkedin.com/company/11277881" target="_blank">LinkedIn</LinkFoot>,&nbsp;
-                    <LinkFoot href="https://www.jszgb.com/" target="_blank">jsZgb</LinkFoot>,&nbsp;
-                    <LinkFoot href="https://nodeschool.io/zagreb/" target="_blank">NodeSchool</LinkFoot>
+                    <LinkFoot href="https://github.com/reactor-studio" target="_blank">Github</LinkFoot>,&nbsp;
+                    <LinkFoot href="https://www.linkedin.com/company/11277881" target="_blank">LinkedIn</LinkFoot>
                 </Links>
             </Right>
             <Left></Left>

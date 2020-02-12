@@ -45,7 +45,8 @@ const CareersPage = () => {
       <SEO title="Careers Reactor" />
       <Heading/>
       <Content>
-        <Title>We're always on the lookout for awesome talent.</Title>
+        <Title>We're always on the lookout for awesome people.</Title>
+        <Title>☞ job@reactor.studio ☜</Title>
         <Description>
           Everything in life is uncertain, but one thing’s for sure: you won’t
           know, if you don’t try. So maybe you should try us. We’re hiring people
@@ -53,7 +54,6 @@ const CareersPage = () => {
           Hit us up, let’s chat over a cup of coffee.
         </Description>
         <Cover fluid={data.coverImage.childImageSharp.fluid} />
-        <Title>job@reactor.studio</Title>
       </Content>
     </Layout>
   )
