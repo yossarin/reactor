@@ -14,6 +14,9 @@ import Header from './header'
 import Footer from './footer'
 import { GlobalStyles, orange, darkBlue } from './globalStyles'
 
+import github from '../images/github.svg'
+
+
 
 export const Container = styled.div`
   width: 1200px;
@@ -40,6 +43,10 @@ const Github = styled.div`
 const Title = styled.h1`
   font-size: 140px;
   text-transform: uppercase;
+  line-height: 1;
+`
+const Img = styled.img`
+  margin: 0;
 `
 
 const Layout = ({ children }) => {
@@ -61,7 +68,7 @@ const Layout = ({ children }) => {
       <Footer/>
       <a href="https://github.com/reactor-studio" target="_blank">
         <Github>
-          <Title>Open 24/7</Title>
+          <Title>Open <Img src={github} /> 24/7</Title>
         </Github>
       </a>
     </>

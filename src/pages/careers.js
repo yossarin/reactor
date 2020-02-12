@@ -53,10 +53,8 @@ const CareersPage = () => {
           Hit us up, let’s chat over a cup of coffee.
         </Description>
         <Cover fluid={data.coverImage.childImageSharp.fluid} />
+        <Title>job@reactor.studio</Title>
       </Content>
-      <RotatorText>
-        Upload CV → job@reactor.studio
-      </RotatorText>
     </Layout>
   )
 }

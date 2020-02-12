@@ -40,6 +40,14 @@ const Nav = styled.nav`
     margin: 80px 0;
     font-size: 14px;
 `
+const Links = styled.p`
+    grid-column: span 2;
+`
+
+const LinkFoot = styled.a`
+    color: ${grey};
+    text-decoration: none;
+`
 
 const link = {
     color: grey,
@@ -65,7 +73,12 @@ const Footer = () => (
                 <p>+385 95 398 6599</p>
                 <div></div>
                 <p>Stalk us</p>
-                <p>Facebook, Linkedin</p>
+                <Links>
+                    <LinkFoot href="https://web.facebook.com/reactorzgb" target="_blank">Facebook</LinkFoot>,&nbsp;
+                    <LinkFoot href="https://www.linkedin.com/company/11277881" target="_blank">LinkedIn</LinkFoot>,&nbsp;
+                    <LinkFoot href="https://www.jszgb.com/" target="_blank">jsZgb</LinkFoot>,&nbsp;
+                    <LinkFoot href="https://nodeschool.io/zagreb/" target="_blank">NodeSchool</LinkFoot>
+                </Links>
             </Right>
             <Left></Left>
             <Right>
@@ -90,7 +103,7 @@ const Footer = () => (
             <Left></Left>
             <Right>
                 <div></div>
-                <p>@2020</p>
+                <p>@{new Date().getFullYear()}</p>
                 <p>All Rights Reserved</p>
             </Right>
         </Content>

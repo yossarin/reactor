@@ -66,7 +66,8 @@ export const GlobalStyles = createGlobalStyle`
   }
   a:active,
   a:hover {
-    outline-width: 0;
+    color: ${black};
+    transition: all .3s;
   }
   abbr[title] {
     border-bottom: none;
