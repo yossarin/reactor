@@ -1,12 +1,17 @@
 import React from 'react'
 import {  graphql } from 'gatsby'
 import styled from 'styled-components'
+import TimeAgo from 'javascript-time-ago'
+import en from 'javascript-time-ago/locale/en'
 
 import SEO from '../components/seo'
 import Layout from '../components/layout'
 import { Content, greyBck } from '../components/globalStyles'
 
 import { Author, Duration } from '../pages/blog'
+
+TimeAgo.addLocale(en)
+const timeAgo = new TimeAgo('en-US')
 
 const Cont = styled(Content)`
   padding 100px 0;
@@ -27,7 +32,7 @@ const Meta = styled.div`
 
 export default ({ data }) => {
     const post = data.markdownRemark
-    const { title, author, duration, tags } = data.markdownRemark.frontmatter;
+    const { title, author, duration, tags, date } = data.markdownRemark.frontmatter;
     return (
         <Layout>
             <SEO title={`${title} | Blog`} />
@@ -36,7 +41,8 @@ export default ({ data }) => {
                     <Title>{title}</Title>
                     <Meta>
                       <Author>{author}</Author>
-                      <Duration>{duration} min</Duration>
+                      <Duration>{timeAgo.format(new Date(date))}</Duration>
+                      <Duration>{duration} min read</Duration>
                       <Duration>{tags.join(', ')}</Duration>
                     </Meta>
                 </Content>
@@ -59,7 +65,7 @@ export const pageQuery = graphql`
         author
         duration
         tags
-        date(formatString: "MMMM DD, YYYY")
+        date
       }
     }
   }
