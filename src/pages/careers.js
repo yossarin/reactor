@@ -5,7 +5,6 @@ import Img from 'gatsby-image'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import RotatorText from '../components/rotatorText'
 import { greyBck, Title, Content } from '../components/globalStyles'
 
 const Heading = styled.div`
@@ -42,7 +41,7 @@ const CareersPage = () => {
 
   return (
     <Layout>
-      <SEO title="Careers Reactor" />
+      <SEO title="Careers" />
       <Heading/>
       <Content>
         <Title>We're always on the lookout for awesome people.</Title>

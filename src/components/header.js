@@ -2,8 +2,7 @@ import { Link } from 'gatsby'
 import React from 'react'
 import styled from 'styled-components'
 
-import { grey, darkBlue } from './globalStyles'
-import { Container } from '../components/layout'
+import { grey, darkBlue, Content } from './globalStyles'
 
 const Sticky = styled.div`
   position:fixed;
@@ -13,7 +12,7 @@ const Sticky = styled.div`
   z-index: 10;
 `
 
-const Content = styled.div`
+const Head = styled.div`
   padding: 20px 0;
   display: flex;
   justify-content: space-between;
@@ -31,27 +30,27 @@ const link = {
 
 const Header = () => (
   <Sticky>
-    <Container>
       <Content>
-        <Link to="/" style={{textDecoration: 'none'}}>
-          <Title>Reactor</Title>
-        </Link>
-        <nav>
-          <Link to="/about" style={link} activeClassName="active">
-            About
+        <Head>
+          <Link to="/" style={{textDecoration: 'none'}}>
+            <Title>Reactor</Title>
           </Link>
-          <Link to="/training" style={link} activeClassName="active">
-            Training
-          </Link>
-          <Link to="/blog" style={link} activeClassName="active">
-            Blog
-          </Link>
-          <Link to="/careers" style={link} activeClassName="active">
-            Careers
-          </Link>
-        </nav>
+          <nav>
+            <Link to="/about" style={link} activeClassName="active">
+              About
+            </Link>
+            <Link to="/training" style={link} activeClassName="active">
+              Training
+            </Link>
+            <Link to="/blog" style={link} activeClassName="active">
+              Blog
+            </Link>
+            <Link to="/careers" style={link} activeClassName="active">
+              Careers
+            </Link>
+          </nav>
+        </Head>
       </Content>
-    </Container>
   </Sticky>
 )
 

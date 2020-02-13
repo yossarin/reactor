@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import Layout, { Container } from '../components/layout'
+import Layout from '../components/layout'
+import { Content } from '../components/globalStyles'
 import SEO from '../components/seo'
 import RotatorText from '../components/rotatorText'
 
@@ -37,30 +38,30 @@ const BlockText =styled.p`
 const IndexPage = () => (
   <Layout>
     <SEO title="Reacotr Studio compound" />
-    <Container>
+    <Content>
       <Title>JavaScript <br/> done right.</Title>
-    </Container>
+    </Content>
     <Separator></Separator>
-    <Container>
+    <Content>
       <Block>
-        <BlockTitle>Development</BlockTitle>
-        <BlockText>We’re a development studio based in Zagreb, Croatia that transforms ideas into reality. Jam-packed with creatives of diverse professional backgrounds, we’re ready to solve all your problems — by paying great attention to detail and creating no technical debt. Not your average bunch of developers.</BlockText>
+        <BlockTitle>Develop</BlockTitle>
+        <BlockText>We’re a development studio based in Zagreb, Croatia that transforms ideas into reality. Jam-packed with creatives of diverse professional backgrounds, we’re ready to solve any problem — by paying great attention to detail and creating no technical debt. Not an average bunch of developers.</BlockText>
       </Block>
-    </Container>
+    </Content>
     <Separator></Separator>
-    <Container>
+    <Content>
       <Block>
-        <BlockTitle>Training</BlockTitle>
-        <BlockText>We’re a development studio based in Zagreb, Croatia that transforms ideas into reality. Jam-packed with creatives of diverse professional backgrounds, we’re ready to solve all your problems — by paying great attention to detail and creating no technical debt. Not your average bunch of developers.</BlockText>
+        <BlockTitle>Improve</BlockTitle>
+        <BlockText>We can't stress enough how much constant improvement is important to us. Learning new skills and tackling challenges from different angles — this is mandatory. By putting emphasis on collaboration, we share our expertise with each other. The possibility to improve a business and ourselves drives us.</BlockText>
       </Block>
-    </Container>
+    </Content>
     <Separator></Separator>
-    <Container>
+    <Content>
       <Block>
-        <BlockTitle>Open Source</BlockTitle>
+        <BlockTitle>Share</BlockTitle>
         <BlockText>We’re proud of us not falling flat in knowledge management. Equipped with experience, we’re sharing it all. No more stumbling in the dark — join our training. Our studio is open, in every sense of the word. We’ll show you the ropes and you’ll master technology and clear up organizational issues in no time.</BlockText>
       </Block>
-    </Container>
+    </Content>
     <RotatorText>
       JavaScript done right
     </RotatorText>

@@ -6,20 +6,7 @@ import Img from 'gatsby-image'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import RotatorText from '../components/rotatorText'
-
-const Title = styled.h1`
-  padding-right: 4rem;
-  margin: 20vh 0 170px;
-  font-family: "Inter-Regular";
-  font-weight: bold;
-  font-size: 2.2rem;
-  line-height: 1.3;
-`
-
-const Content = styled.section`
-  max-width: 1200px;
-  margin: 0 auto;
-`
+import { Title, Content } from '../components/globalStyles'
 
 const Description = styled.article`
   max-width: 40em;
@@ -85,7 +72,7 @@ const AboutPage = () => {
 
   return (
     <Layout>
-      <SEO title="About reactor" />
+      <SEO title="About" />
       <Content>
         <Title>
           We are a consultancy for agile JavaScript development. By bringing transparent

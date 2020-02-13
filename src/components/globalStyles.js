@@ -5,12 +5,15 @@ export const grey = '#686868'
 export const greyBck = '#F8F8F8'
 export const darkBlue = '#1A465C'
 export const orange = '#F28924'
+export const yellow = '#ECBC04'
 
 export const Title = styled.h1`
+  padding-right: 4rem;
+  margin: 20vh 0 170px;
   font-family: "Inter-Regular";
   font-weight: bold;
-  font-size: 4rem;
-  margin: 20vh 0 2.3rem;
+  font-size: 2.2rem;
+  line-height: 1.3;
 `
 
 export const Content = styled.section`

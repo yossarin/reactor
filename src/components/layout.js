@@ -16,13 +16,6 @@ import { GlobalStyles, orange, darkBlue } from './globalStyles'
 
 import github from '../images/github.svg'
 
-
-
-export const Container = styled.div`
-  width: 1200px;
-  margin: 0 auto;
-`
-
  const Main = styled.main`
   background: white;
   margin-top: 84px;

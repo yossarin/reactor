@@ -2,8 +2,7 @@ import { Link } from 'gatsby'
 import React from 'react'
 import styled from 'styled-components'
 
-import { Container } from './layout';
-import { grey, greyBck } from './globalStyles'
+import { grey, greyBck, Content } from './globalStyles'
 import logo from '../images/logo.png'
 
 const Foot = styled.footer`
@@ -17,7 +16,7 @@ const Logo = styled.img`
     width: 100px;
 `
 
-const Content = styled.div`
+const Inner = styled.div`
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     padding-top: 100px;
@@ -57,8 +56,8 @@ const link = {
 
 const Footer = () => (
   <Foot>
-    <Container>
-        <Content>
+    <Content>
+        <Inner>
             <Left>
                 <Logo src={logo} />
             </Left>
@@ -105,8 +104,8 @@ const Footer = () => (
                 <p>@{new Date().getFullYear()}</p>
                 <p>All Rights Reserved</p>
             </Right>
-        </Content>
-    </Container>
+        </Inner>
+    </Content>
   </Foot>
 )
 
