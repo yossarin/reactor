@@ -7,6 +7,7 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import RotatorText from '../components/rotatorText'
 import { Title, Content } from '../components/globalStyles'
+import PeopleSlider from '../components/peopleSlider'
 
 const Description = styled.article`
   max-width: 40em;
@@ -116,6 +117,7 @@ const AboutPage = () => {
           </DescriptionText>
         </Description>
       </Content>
+      <PeopleSlider />
       <RotatorText>
         We expertly plan and deliver projects.
       </RotatorText>
