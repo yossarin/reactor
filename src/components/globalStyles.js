@@ -17,7 +17,8 @@ export const Title = styled.h1`
 `
 
 export const Content = styled.section`
-  max-width: 66em;
+  max-width: 66rem;
+  padding: 0 60px;
   margin: 0 auto;
 `
 
