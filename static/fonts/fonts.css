@@ -10,3 +10,22 @@
     font-family: "Inter-Regular";
     src: url("Inter-Regular.otf");
 }
+
+@font-face {
+    font-family: "Sohene-Regular";
+    src: url("soehne-test-regular.woff");
+}
+
+@font-face {
+    font-family: "Sohene-Medium";
+    src: url("soehne-test-medium.woff");
+}
+@font-face {
+    font-family: "Untitled-Regular";
+    src: url("untitled-sans-test-regular.woff");
+}
+
+@font-face {
+    font-family: "Untitled-Medium";
+    src: url("untitled-sans-test-medium.woff");
+}

@@ -12,7 +12,9 @@ TimeAgo.addLocale(en)
 const timeAgo = new TimeAgo('en-US')
 
 const Content = styled(Cont)`
-  padding: 50px 0;
+  &:last-of-type hr {
+    display: none;
+  }
 `
 
 const BlogTitle = styled.h2`
@@ -49,6 +51,7 @@ const Tags = styled(Duration)`
 
 const Separator = styled.div`
   border-top: 1px solid ${greyBck};
+  margin: 40px 0;
 `
 
 const link = {
@@ -71,8 +74,8 @@ const Post = post => (
         <Duration>{post.frontmatter.duration} min read</Duration>
         <Tags>{post.frontmatter.tags.join(', ')}</Tags>
       </Meta>
+      <Separator/>
     </Content>
-    <Separator/>
   </>
 )
 
