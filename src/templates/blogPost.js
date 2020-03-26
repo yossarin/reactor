@@ -59,7 +59,6 @@ const sharedTypography = css`
 
     p {
       color: ${yellow};
-      font-family: "Sohene-Medium";
       font-weight: 500;
       font-size: 40px;
       line-height: 56px;
@@ -83,6 +82,11 @@ const typographySohene = css`
     font-size: 20px;
     line-height: 32px;
   }
+
+
+  blockquote p {
+    font-family: "Sohene-Medium";
+  }
 `
 
 const typographyUntitled= css`
@@ -93,13 +97,17 @@ const typographyUntitled= css`
   }
 
   h3, p {
-    font-family: "Sohene-Regular";
+    font-family: "Untitled-Regular";
     font-weight: 400;
   }
 
   p {
     font-size: 20px;
     line-height: 32px;
+  }
+
+  blockquote p {
+    font-family: "Untitled-Medium";
   }
 `
 
@@ -121,7 +129,7 @@ export default ({ data }) => {
             <SEO title={`${title} | Blog`} />
             <TitleSection>
                 <Content>
-                    <Title>{title}</Title>
+                    <Title typoType={tempTypographyType}>{title}</Title>
                     <Meta>
                       <Author>{author}</Author>
                       <Duration>{timeAgo.format(new Date(date))}</Duration>
