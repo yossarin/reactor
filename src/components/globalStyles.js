@@ -1,5 +1,13 @@
 import styled, { createGlobalStyle } from 'styled-components'
 
+import SojuzMonoRegular from '../../static/fonts/SojuzMono-Regular.otf.b64';
+import SojuzMonoBold from '../../static/fonts/SojuzMono-Bold.otf.b64';
+import InterRegular from '../../static/fonts/Inter-Regular.otf.b64';
+import SoehneTestRegular from '../../static/fonts/soehne-test-regular.woff.b64';
+import SoehneTestMedium from '../../static/fonts/soehne-test-medium.woff.b64';
+import UntitledSansTestRegular from '../../static/fonts/untitled-sans-test-regular.woff.b64';
+import UntitledSansTestMedium from '../../static/fonts/untitled-sans-test-medium.woff.b64';
+
 export const black = '#111111'
 export const grey = '#686868'
 export const greyBck = '#F8F8F8'
@@ -22,7 +30,42 @@ export const Content = styled.section`
   margin: 0 auto;
 `
 
+const fonts = `
+  @font-face {
+    font-family: "SojuzMono-Regular";
+    src: url(data:font/otf;base64,${SojuzMonoRegular});
+  }
+  @font-face {
+    font-family: "SojuzMono-Bold";
+    src: url(data:font/otf;base64,${SojuzMonoBold});
+  }
+  @font-face {
+    font-family: "Inter-Regular";
+    src: url(data:font/otf;base64,${InterRegular});
+  }
+
+  @font-face {
+    font-family: "Sohene-Regular";
+    src: url(data:font/woff;base64,${SoehneTestRegular});
+  }
+
+  @font-face {
+    font-family: "Sohene-Medium";
+    src: url(data:font/woff;base64,${SoehneTestMedium});
+  }
+  @font-face {
+    font-family: "Untitled-Regular";
+    src: url(data:font/woff;base64,${UntitledSansTestRegular});
+  }
+
+  @font-face {
+    font-family: "Untitled-Medium";
+    src: url(data:font/woff;base64,${UntitledSansTestMedium});
+  }
+`;
+
 export const GlobalStyles = createGlobalStyle`
+  ${fonts}
   html {
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;

@@ -61,3 +61,22 @@ exports.onCreateNode = ({ node, actions }) => {
     })
   }
 }
+
+exports.onCreateWebpackConfig = ({
+  stage,
+  rules,
+  loaders,
+  plugins,
+  actions,
+}) => {
+  actions.setWebpackConfig({
+    module: {
+      rules: [
+        {
+          test: /\.b64$/,
+          use: 'raw-loader',
+        },
+      ],
+    },
+  })
+}
