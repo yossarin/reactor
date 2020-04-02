@@ -2,7 +2,7 @@ import styled, { createGlobalStyle } from 'styled-components'
 
 import SojuzMonoRegular from '../../static/fonts/SojuzMono-Regular.otf.b64';
 import SojuzMonoBold from '../../static/fonts/SojuzMono-Bold.otf.b64';
-import InterRegular from '../../static/fonts/Inter-Regular.otf.b64';
+import InterRegular from '../../static/fonts/Inter-Regular.woff.b64';
 import SoehneTestRegular from '../../static/fonts/soehne-test-regular.woff.b64';
 import SoehneTestMedium from '../../static/fonts/soehne-test-medium.woff.b64';
 import UntitledSansTestRegular from '../../static/fonts/untitled-sans-test-regular.woff.b64';
@@ -41,7 +41,7 @@ const fonts = `
   }
   @font-face {
     font-family: "Inter-Regular";
-    src: url(data:font/otf;base64,${InterRegular});
+    src: url(data:font/woff;base64,${InterRegular});
   }
 
   @font-face {
