@@ -49,6 +49,15 @@ module.exports = {
         display: 'minimal-ui',
         icon: 'src/images/reactor.png' // This path is relative to the root of the site.
       }
+    },
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        custom: {
+          families: ['Sohene-Regular', 'Sohene-Medium', 'Untitled-Regular', 'Untitled-Medium'],
+          urls: ['/fonts/fonts.css']
+        }
+      }
     }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline

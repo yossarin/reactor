@@ -1,21 +1,7 @@
 @font-face {
-    font-family: "SojuzMono-Regular";
-    src: url("SojuzMono-Regular.otf");
-}
-@font-face {
-    font-family: "SojuzMono-Bold";
-    src: url("SojuzMono-Bold.otf");
-}
-@font-face {
-    font-family: "Inter-Regular";
-    src: url("Inter-Regular.otf");
-}
-
-@font-face {
     font-family: "Sohene-Regular";
     src: url("soehne-test-regular.woff");
 }
-
 @font-face {
     font-family: "Sohene-Medium";
     src: url("soehne-test-medium.woff");
